@@ -1,1 +1,71 @@
-
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    background-color: #000000;
+    color: white;
+  }
+    
+  .navbar-logo img {
+    height: 300px;
+  }
+    
+  .sign-up-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }  
+  
+  .sign-up-page h1 {
+    margin-bottom: 40px;
+    align-self: flex;
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    position: relative;
+    right: 25%;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 140%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0px;
+    border: 1px solid #b4b1b1;
+    background-color: #bebcbc;
+  }
+  
+  .btn-primary {
+    width: 60%;
+    position: relative;
+    left: 20%;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    background-color: #080808;
+    color: #FFFFFF;
+  }
+  
+  .btn-primary:hover {
+    background-color: #545455;
+  }
+  
+  .login-container {
+    position: absolute;
+    bottom: 100px;
+    left: 45%;
+    font-weight: bold;
+  }
+  
+  

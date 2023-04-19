@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-function Login() {
+function Login(props) {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleRememberMeChange = () => {
@@ -12,8 +12,7 @@ function Login() {
     <div className="container">
       <nav className="navbar">
         <div className="navbar-logo">
-        <img src="/assets/PodClub__2_-removebg-preview.png" alt="logo" />
-
+          <img src="/assets/PodClub__2_-removebg-preview.png" alt="logo" />
         </div>
       </nav>
       <div className="login-page">
@@ -31,7 +30,7 @@ function Login() {
             Login
           </button>
           <p className="forgot-password">
-            Forgot your password?
+            Forgot your password?{" "}
           </p>
           <div className="form-check">
                <input
@@ -49,7 +48,7 @@ function Login() {
               <p class="sign-up-container">
                 No Account?
               </p>
-              <button type="submit" class="btn btn-signup">Sign up</button>
+              <button type="button" class="btn btn-signup" onClick={props.toggle}>Sign up</button>
         </form>
       </div>
     </div>
