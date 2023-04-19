@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
-}
+/* Home */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contentInfo .contentInfoBox{
+  max-width: 100%;
+  height: 54vh;
+  /* border: 5px solid #000; */
+  background: url('https://images.pexels.com/photos/1028444/pexels-photo-1028444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center;
+  background-size: cover;
+  padding: 5%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contentInfoBoxText{
+  /* border: 3px solid black; */
+  width: 100%;
+  height: 35vh;
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contentInfo .contentInfoBox h1{
+  font-size: 50px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  /* border: 4px solid green; */
+}
+.contentInfo .contentInfoBox p{
+  line-height: 1.3;
+  font-size: 20px;
+}
+.buttons{
   display: flex;
-  flex-direction: column;
+  position: absolute;
+  width: 40%;
+  bottom: 0;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+}
+.buttons button{
+  cursor: pointer;
+  padding: 20px 45px;
+  border: 0;
+  outline: none;
+  border-radius: 50px;
+  background: #fff;
+  /* background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)); */
+
+  color: #333;
+  font-weight: 700;
+  transition: .5s ease;
+}
+.buttons button:hover{
+  transform: scale(1.1);
+}
+.footer{
+  max-width: 100%;
+  bottom: 0;
+  background: red;
+  /* min-height: 41.3vh; */
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  .footer{
+      margin-bottom: 10px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Home */
+
+/* Footer */
+.Footers{
+  background: rgb(10, 10, 32);
+  width: 100%;
+  /* height: 34.99vh; */
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+.FooterBotom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+  color: #fff;
+  /* border:3px solid red */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footerBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 30%;
 }
+.LG{
+  width: 100px;
+}
+.bi{
+  color: #fff;
+  font-size: 40px;
+}
+
+.Lg{
+  width: 90px;
+  cursor: pointer;
+}
+/* Footer */
