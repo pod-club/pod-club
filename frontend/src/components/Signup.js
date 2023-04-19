@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "/home/amina/development/projects/phase-5/pod-club/frontend/src/components/assets/PodClub__2_-removebg-preview.png"
 import "./Signup.css";
 
 function Signup() {
@@ -23,7 +24,7 @@ function Signup() {
     <div className="container">
       <nav className="navbar">
         <div className="navbar-logo">
-          <img src="/assets/PodClub__2_-removebg-preview.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
       </nav>
       <div className="sign-up-page">
