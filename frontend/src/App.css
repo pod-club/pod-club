@@ -116,9 +116,7 @@
 }
 
 .bi-google {
-  background-image: linear-gradient(to right, #e62107, #1f83e0, rgb(32, 216, 78), rgb(233, 208, 97));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #64d11b;
 }
 
 
