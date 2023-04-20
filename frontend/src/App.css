@@ -28,9 +28,9 @@
 }
 .buttons{
   display: flex;
-  position: fixed;
-  width: 30%;
-  bottom: 60;
+  position: absolute;
+  width: 10%;
+  bottom: 40;
   align-items: center;
   justify-content: space-around;
 }
@@ -98,6 +98,27 @@
   color: #ffffff;
   font-size: 40px;
 }
+
+.bi-youtube {
+  color: red;
+}
+
+.bi-facebook {
+  color: rgb(15, 15, 224);
+}
+
+.bi-twitter {
+  color: rgb(23, 131, 231);
+}
+
+.bi-linkedin {
+  color: rgb(114, 81, 233);
+}
+
+.bi-google {
+  color: #64d11b;
+}
+
 
 .Lg{
   width: 200px;
