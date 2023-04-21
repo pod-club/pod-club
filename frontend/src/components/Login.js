@@ -45,11 +45,11 @@ function Login(props) {
               Remember me
             </label>
             </div>
-            <div class="line"></div>
-              <p class="sign-up-container">
+            <div className="line"></div>
+              <p className="sign-up-container">
                 No Account?
               </p>
-              <button type="button" class="btn btn-signup" onClick={props.toggle}>Sign up</button>
+              <button type="button" className="btn btn-signup" onClick={props.toggle}>Sign up</button>
         </form>
       </div>
     </div>
