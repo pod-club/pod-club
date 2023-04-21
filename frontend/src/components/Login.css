@@ -112,12 +112,12 @@
 
 .line {
   border-top: 2px solid #000000;
-  width: 540%;
+  width: 400%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  right: 220%;
+  right: 150%;
   margin-top: 70px;
   margin-bottom: 20px;
 }
