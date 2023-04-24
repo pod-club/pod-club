@@ -1,0 +1,59 @@
+.invite-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    width: 400px;
+  }
+  
+  .invite-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .invite-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .invite-input-container {
+    margin-bottom: 16px;
+  }
+  
+  .invite-label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .invite-input,
+  .invite-textarea {
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+  }
+  
+  .invite-textarea {
+    height: 120px;
+  }
+  
+  .invite-button {
+    background-color: black;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .invite-button:hover {
+    background-color: purple;
+  }
+  
