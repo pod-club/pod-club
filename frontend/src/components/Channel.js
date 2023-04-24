@@ -6,8 +6,8 @@ function Channel() {
   const [newChannelName, setNewChannelName] = useState('');
   const [newChannelDescription, setNewChannelDescription] = useState('');
   const [selectedChannelIndex, setSelectedChannelIndex] = useState(null);
-  const [editingName, setEditingName] = useState(false);
-  const [editingDescription, setEditingDescription] = useState(false);
+//   const [editingName, setEditingName] = useState(false);
+//   const [editingDescription, setEditingDescription] = useState(false);
 
   const handleCreateChannel = (e) => {
     e.preventDefault();
@@ -27,21 +27,21 @@ function Channel() {
     }
   };
 
-  const handleUpdateChannelName = (channelIndex, newName) => {
-    const updatedChannels = [...channels];
-    updatedChannels[channelIndex].name = newName;
-    setChannels(updatedChannels);
-    setSelectedChannelIndex(null);
-    setEditingName(false);
-  };
+//   const handleUpdateChannelName = (channelIndex, newName) => {
+//     const updatedChannels = [...channels];
+//     updatedChannels[channelIndex].name = newName;
+//     setChannels(updatedChannels);
+//     setSelectedChannelIndex(null);
+//     setEditingName(false);
+//   };
 
-  const handleUpdateChannelDescription = (channelIndex, newDescription) => {
-    const updatedChannels = [...channels];
-    updatedChannels[channelIndex].description = newDescription;
-    setChannels(updatedChannels);
-    setSelectedChannelIndex(null);
-    setEditingDescription(false);
-  };
+//   const handleUpdateChannelDescription = (channelIndex, newDescription) => {
+//     const updatedChannels = [...channels];
+//     updatedChannels[channelIndex].description = newDescription;
+//     setChannels(updatedChannels);
+//     setSelectedChannelIndex(null);
+//     setEditingDescription(false);
+//   };
 
   const handleDeleteChannel = (channelIndex) => {
     const updatedChannels = [...channels];
@@ -59,17 +59,31 @@ function Channel() {
       <h2 className="channel-heading">Group Channels</h2>
       <ul className="channel-list">
         {channels.map((channel, index) => (
-          <li key={index} className="channel-item" onClick={() => handleChannelClick(index)}>
-            <h3 className="channel-name">{channel.name}</h3>
+          <li key={index} className="channel-item">
             {selectedChannelIndex === index ? (
-              <input
-                type="text"
-                className="channel-description-input"
-                value={channel.description}
-                onChange={(e) => handleUpdateChannel(index, e.target.value)}
-              />
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                // handleUpdateChannel(index, e.target.name.value, e.target.description.value);
+              }}>
+                <input
+                  type="text"
+                  className="channel-name-input"
+                  name="name"
+                  defaultValue={channel.name}
+                />
+                <input
+                  type="text"
+                  className="channel-description-input"
+                  name="description"
+                  defaultValue={channel.description}
+                />
+                <button type="submit">Save</button>
+              </form>
             ) : (
-              <p className="channel-description">{channel.description}</p>
+              <>
+                <h3 className="channel-name">{channel.name}</h3>
+                <p className="channel-description">{channel.description}</p>
+              </>
             )}
             <div className="channel-action-buttons">
               <button className="channel-button channel-invite-button" onClick={() => handleInvite(channel.name)}>
@@ -86,7 +100,7 @@ function Channel() {
         ))}
       </ul>
       <form className="channel-form" onSubmit={handleCreateChannel}>
-        <label className="channel-label" htmlFor="channelName">
+      <label className="channel-label" htmlFor="channelName">
           Name:
         </label>
         <input
