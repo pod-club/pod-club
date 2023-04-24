@@ -85,3 +85,38 @@
 // }
 
 // export default Chat;
+import React from "react";
+import logo from '../assets/PodClub__1_-removebg-preview.png';
+
+function chat () {
+    return (
+        <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+  <div class="shrink-0">
+    <img class="h-12 w-12" src={logo} alt="ChitChat Logo"/>
+  </div>
+  <div>
+    <div class="text-xl font-medium text-black">ChitChat</div>
+    <p class="text-slate-500">You have a new message!</p>
+  </div>
+
+        {/* For profile photo */}
+  <form class="flex items-center space-x-6">
+  <div class="shrink-0">
+    <img class="h-16 w-16 object-cover rounded-full" src= {logo} alt="logo" />
+  </div>
+  <label class="block">
+    <span class="sr-only">Choose profile photo</span>
+    <input type="file" class="block w-full text-sm text-slate-500
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-full file:border-0
+      file:text-sm file:font-semibold
+      file:bg-violet-50 file:text-violet-700
+      hover:file:bg-violet-100
+    "/>
+  </label>
+</form>
+</div>
+    );
+}
+
+export default chat;
