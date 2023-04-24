@@ -1,89 +1,77 @@
 /* Home */
-
-.contentInfo .contentInfoBox{
-  max-width: 100%;
-  height: 54vh;
-  border: 0px solid #000;
-  background: url('/home/amina/development/projects/phase-5/pod-club/frontend/src/components/assets/background-image.png');
-  background-position: center;
-  background-size: cover;
-  padding: 9%;
-}
-.contentInfoBoxText{
-  width: 90%;
-  height: 35vh;
-  position: absolute;
-}
-.contentInfo .contentInfoBox h1{
-  font-size: 50px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  color: #9b9898;
-
-}
-.contentInfo .contentInfoBox p{
-  line-height: 1.3;
-  font-size: 20px;
-  color: #9b9898;
-}
-.buttons{
+.Container{
+  width: 100%;
+  /* height: 100vh; */
   display: flex;
-  position: fixed;
-  width: 30%;
-  bottom: 60;
+  position: relative;
+}
+
+.Sidebar{
+  flex-basis: 20%;
+  height: 100vh;
+  background: #fff;
+}
+.SidebarContent{
+  margin-top: 4%;
+  background: #fff;
+  width: 100%;
+  height: 96vh;
+  text-align: center;
+  display: block;
+}
+.LogoImage{
+  width: 200px;
+  cursor: pointer;
+  margin-top: 5%;
+}
+.Icons{
+  display: block;
+  width: 100%;
+  height: 40vh;
+}
+.Content{
+  display: flex;
   align-items: center;
   justify-content: space-around;
-}
-.buttons button{
-  cursor: pointer;
-  padding: 20px 45px;
-  border: 0;
-  outline: none;
-  border-radius: 50px;
-  background: #e9e6e6;
-  color: #333;
-  font-weight: 900;
-  transition: .5s ease;
+  width: 80%;
+  margin-left: 10%;
+  height: 10vh;
 }
 
-.buttons button:hover{
-  transform: scale(1.1);
-}
+.MainContainer{
+  flex-basis: 80%;
+  height: 100vh;
+  background: url('/home/aisha/Documents/Development/phase5/pod-club/frontend/src/components/assets/background-image.png');
+  background-position: center;
+  /* background-size: coVER; */
+  text-align: center;
+  text-decoration: white;
 
-.button-get-started {
-  padding: 16px 32px;
-  background-color: #f2f5f8;
-  border: none;
-  border-radius: 32px;
-  color: #000000;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 10px;
+  
 }
-
-.button-get-started:hover {
-  background-color: #79797a;
-}
-
-/* Home */
 
 
 /* Footer */
 .Footers{
   background: black;
   width: 100%;
-  height: 30%;
+  height: 25%;
   position: fixed;
   bottom: 0;
+  margin-top: 10px;
 }
 
 .FooterBotom{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1%;
+  /* padding: 1%; */
   color: #fff;
+  background: black;
+  
+  width: 100%;
+  /* margin:0 20%; */
 }
 
 .footerBox{
@@ -102,5 +90,6 @@
 .Lg{
   width: 200px;
   cursor: pointer;
+  padding-left: 20px;
 }
 /* Footer */
