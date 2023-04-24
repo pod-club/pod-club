@@ -1,25 +1,25 @@
 /* Home */
-.Container{
+/* .Container{
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   display: flex;
   position: relative;
-}
+} */
 
-.Sidebar{
+/* .Sidebar{
   flex-basis: 20%;
   height: 100vh;
   background: #fff;
-}
-.SidebarContent{
+} */
+/* .SidebarContent{
   margin-top: 4%;
   background: #fff;
   width: 100%;
   height: 96vh;
   text-align: center;
-  display: block;
-}
-.LogoImage{
+  display: block; */
+/* } */
+/* .LogoImage{
   width: 200px;
   cursor: pointer;
   margin-top: 5%;
@@ -31,47 +31,54 @@
 }
 .Content{
   display: flex;
+
+  position: absolute;
+  width: 10%;
+  bottom: 40;
+
   align-items: center;
   justify-content: space-around;
   width: 80%;
   margin-left: 10%;
   height: 10vh;
-}
+}*/
 
-.MainContainer{
-  flex-basis: 80%;
+ .MainContainer{
+  background: url('/home/aisha/Documents/Development/phase5/pod-club/frontend/src/components/assets/background-image.png'); 
+  /* flex-basis: 80%;
   height: 100vh;
-  background: url('/home/aisha/Documents/Development/phase5/pod-club/frontend/src/components/assets/background-image.png');
+  */
   background-position: center;
-  /* background-size: coVER; */
+  background-size: coVER;
   text-align: center;
   text-decoration: white;
 
-  margin-bottom: 10px;
+  margin-bottom: 10px; 
   
-}
+}  
 
 
 /* Footer */
 .Footers{
   background: black;
-  width: 100%;
-  height: 25%;
+  width: 80%;
+  height: 15%;
   position: fixed;
   bottom: 0;
   margin-top: 10px;
-}
+} 
 
 .FooterBotom{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 1%; */
+  padding: 1%;
   color: #fff;
   background: black;
   
   width: 100%;
-  /* margin:0 20%; */
+  margin-top: -50px;
+  height: 10vh;
 }
 
 .footerBox{
@@ -87,9 +94,30 @@
   font-size: 40px;
 }
 
+.bi-youtube {
+  color: red;
+}
+
+.bi-facebook {
+  color: rgb(15, 15, 224);
+}
+
+.bi-twitter {
+  color: rgb(23, 131, 231);
+}
+
+.bi-linkedin {
+  color: rgb(114, 81, 233);
+}
+
+.bi-google {
+  color: #64d11b;
+}
+ 
+
 .Lg{
   width: 200px;
   cursor: pointer;
   padding-left: 20px;
-}
+} 
 /* Footer */
