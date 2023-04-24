@@ -1,13 +1,38 @@
 import React, { useState } from "react";
-import logo from "/home/amina/development/projects/phase-5/pod-club/frontend/src/components/assets/PodClub__2_-removebg-preview.png"
+import logo from "./assets/PodClub__2_- white.png"
 import "./Login.css";
 
 function Login(props) {
-  const [rememberMe, setRememberMe] = useState(false);
 
-  const handleRememberMeChange = () => {
-    setRememberMe(!rememberMe);
-  };
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+      const userData = {
+        user: {
+          email: email,
+          password: password
+        },
+      };
+      try {
+        const response = await fetch('http://localhost:3000/sessions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+        },{withCredentials: true}
+        );
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        // Registration successful, redirect to login page
+       // window.location.href = '/login';
+      } catch (error) {
+        setError('Failed to register user');
+      }
+    };  
 
   return (
     <div className="container">
@@ -18,14 +43,15 @@ function Login(props) {
       </nav>
       <div className="login-page">
         <h1>Login to continue</h1>
-        <form>
+        <form onSubmit={handleFormSubmit}>
+        {error && <div>{error}</div>}
           <div className="form-group">
             <label htmlFor="email">Email address</label>
-            <input type="email" className="form-control" id="email" />
+            <input type="email" className="form-control" id="email" onChange={(event) => setEmail(event.target.value)} />
           </div>
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input type="password" className="form-control" id="password" />
+            <input type="password" className="form-control" id="password" onChange={(event) => setPassword(event.target.value)} />
           </div>
           <button type="submit" className="btn btn-primary">
             Login
@@ -33,18 +59,6 @@ function Login(props) {
           <p className="forgot-password">
             Forgot your password?{" "}
           </p>
-          <div className="form-check">
-               <input
-                 type="checkbox"
-                className="form-check-input"
-                id="rememberMe"
-                checked={rememberMe}
-                onChange={handleRememberMeChange}
-              />
-            <label className="form-check-label" htmlFor="rememberMe">
-              Remember me
-            </label>
-            </div>
             <div className="line"></div>
               <p className="sign-up-container">
                 No Account?
@@ -57,4 +71,3 @@ function Login(props) {
 }
 
 export default Login;
-

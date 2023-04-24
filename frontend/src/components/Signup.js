@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "/home/amina/development/projects/phase-5/pod-club/frontend/src/components/assets/PodClub__2_-removebg-preview.png"
+import logo from "./assets/PodClub__2_- white.png";
 import "./Signup.css";
 
 function Signup() {
@@ -7,6 +7,8 @@ function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState(null);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +19,34 @@ function Signup() {
       console.log("Submitting form...");
       // You can send the form data to a server using fetch or Axios
     }
+
+    const userData = {
+      user: {
+        username: username,
+        email: email,
+        password: password,
+        password_confirmation: confirmPassword,
+      },
+    };
+
+    try {
+      const response = fetch('http://localhost:3000/registrations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      },{withCredentials: true}
+      );
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      // Registration successful, redirect to login page
+      window.location.href = '/login';
+    } catch (error) {
+      setError('Failed to register user');
+    }
+
   };
   
 
@@ -30,6 +60,7 @@ function Signup() {
       <div className="sign-up-page">
         <h1>Sign up for free</h1>
         <form onSubmit={handleSubmit}>
+        {error && <div>{error}</div>}
         <div className="form-group">
             <label htmlFor="username">Username</label>
             <input
@@ -70,7 +101,7 @@ function Signup() {
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" id="signup">
             Sign up
           </button>
           <p className="login-container">

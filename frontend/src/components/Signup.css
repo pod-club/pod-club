@@ -57,15 +57,16 @@
     color: #FFFFFF;
   }
   
-  .btn-primary:hover {
+  /* #signup:hover {
     background-color: #545455;
-  }
+  } */
   
   .login-container {
     position: absolute;
     bottom: 90px;
     left: 45%;
     font-weight: bold;
+    margin-top: 3vh;
   }
   
   

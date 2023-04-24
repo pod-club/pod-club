@@ -80,7 +80,8 @@
 }
 
 .btn-primary:hover {
-  background-color:  #545455;
+  background-color:  white !important;
+  color: black;
 }
 
 .sign-up-container {
@@ -89,6 +90,7 @@
   bottom: 150px;
   left: 47%;
   font-weight: bold;
+  /* margin-top: 50px; */
 }
 
 .btn-signup {
@@ -107,7 +109,8 @@
 }
 
 .btn-signup:hover {
-  background-color: #545455;
+  background-color: white !important;
+  color: #000000;
 }
 
 .line {
