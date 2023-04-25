@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './Channel.css';
+import { Link } from 'react-router-dom';
 import logo from '../components/assets/PodClub__1_-removebg-preview.png';
+// import Channelview from './Channelview';
 // import icon from '../components/assets/icons8-music-library-50.png';
 
-function Channel() {
+function Channel({name, description, imageUrl, id}) {
   const [channels, setChannels] = useState([]);
   const [newChannelName, setNewChannelName] = useState('');
   const [newChannelDescription, setNewChannelDescription] = useState('');
@@ -86,9 +88,11 @@ function Channel() {
                 )}
                 
                 <div className="channel-action-buttons">
-                <button className="channel-button channel-view-button" id='View' onClick={() => handleViewChannel(index)}>
-                    View
-                  </button>
+                  <Link to={`/Channelview/${index}`}>
+                    <button className="channel-button channel-view-button" id='View' onClick={() => handleViewChannel(index)}>
+                      View
+                    </button>
+                  </Link>
                   <button className="channel-button channel-update-button" id='Update' onClick={() => setSelectedChannelIndex(index)}>
                     Update
                   </button>
