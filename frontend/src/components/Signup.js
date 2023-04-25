@@ -10,44 +10,42 @@ function Signup() {
   const [error, setError] = useState(null);
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Handle form submission logic here
+  
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      setError("Passwords do not match");
     } else {
-      console.log("Submitting form...");
-      // You can send the form data to a server using fetch or Axios
-    }
-
-    const userData = {
-      user: {
-        username: username,
-        email: email,
-        password: password,
-        password_confirmation: confirmPassword,
-      },
-    };
-
-    try {
-      const response = fetch('http://localhost:3000/registrations', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const userData = {
+        user: {
+          username: username,
+          email: email,
+          password: password,
+          password_confirmation: confirmPassword,
         },
-        body: JSON.stringify(userData),
-      },{withCredentials: true}
-      );
-      if (!response.ok) {
-        throw new Error(response.statusText);
+      };
+  
+      try {
+        const response = await fetch("http://localhost:3000/registrations", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+          credentials: "include", // add this to include cookies in the request
+        });
+  
+        if (!response.ok) {
+          throw new Error("Registration failed");
+        }
+  
+        window.location.href = "/login";
+      } catch (error) {
+        setError(error.message);
       }
-      // Registration successful, redirect to login page
-      window.location.href = '/login';
-    } catch (error) {
-      setError('Failed to register user');
     }
-
   };
+  
   
 
   return (
