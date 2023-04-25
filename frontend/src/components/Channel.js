@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Channel.css';
 import { Link } from 'react-router-dom';
-import logo from '../components/assets/PodClub__1_- black.png';
+import logo from '../components/assets/PodClub__2_- white.png';
 // import Channelview from './Channelview';
 // import icon from '../components/assets/icons8-music-library-50.png';
 
@@ -50,7 +50,7 @@ function Channel({name, description, imageUrl, id}) {
 
   return (
     <div className="Container" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", width: "100%", height: "100vh"}}>
-      <div className="Sidebar" style={{ backgroundColor: "#fff", width: "20%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+      <div className="Sidebar" style={{ backgroundColor: "black", width: "20%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
         <div className="SidebarContent" style={{ margin: "2rem"}}>
           <img src={logo} className="LogoImage" alt="logo" style={{ width: "80%", marginBottom: "2rem"}}/>  
         </div>
