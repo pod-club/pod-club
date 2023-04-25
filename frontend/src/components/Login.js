@@ -1,38 +1,39 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "./assets/PodClub__2_- white.png"
 import "./Login.css";
 
 function Login(props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-    const handleFormSubmit = async (event) => {
-      event.preventDefault();
-      const userData = {
-        user: {
-          email: email,
-          password: password
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    const userData = {
+      user: {
+        email: email,
+        password: password,
+      },
+    };
+    try {
+      const response = await fetch("http://localhost:3000/sessions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      };
-      try {
-        const response = await fetch('http://localhost:3000/sessions', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userData),
-        },{withCredentials: true}
-        );
-        if (!response.ok) {
-          throw new Error(response.statusText);
-        }
-        // Registration successful, redirect to login page
-       // window.location.href = '/login';
-      } catch (error) {
-        setError('Failed to register user');
+        body: JSON.stringify(userData),
+        credentials: "include", // add this to enable cookies for subsequent requests
+      });
+      if (!response.ok) {
+        throw new Error(response.statusText);
       }
-    };  
+      // Login successful, call the callback function passed as a prop
+      props.onLoginSuccess();
+    } catch (error) {
+      setError("Failed to login");
+    }
+  };  
 
   return (
     <div className="container">
@@ -56,10 +57,10 @@ function Login(props) {
           <button type="submit" className="btn btn-primary">
             Login
           </button>
-          <p className="forgot-password">
+          {/* <p className="forgot-password">
             Forgot your password?{" "}
-          </p>
-            <div className="line"></div>
+          </p> */}
+            {/* <div className="line"></div> */}
               <p className="sign-up-container">
                 No Account?
               </p>
