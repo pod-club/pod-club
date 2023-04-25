@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "/home/amina/development/projects/phase-5/pod-club/frontend/src/components/assets/PodClub__2_-removebg-preview.png"
+import logo from '../components/assets/PodClub__2_-removebg-preview.png';
 import "./Login.css";
 
 function Login(props) {
