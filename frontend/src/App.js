@@ -35,7 +35,7 @@ function App() {
           <Channel />
         </Route> */}
       </Switch>
-      <Channel/>
+      {/* <Channel/> */}
       <Footer />
     </div>
   );

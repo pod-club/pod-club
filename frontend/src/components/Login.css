@@ -96,16 +96,17 @@
 
 .btn-signup {
   position: absolute;
-  bottom: 300px;
+  bottom: 302px;
   /* left: 44%; */
   width: 5%;
-  padding: 10px;
+  padding: 5px;
+  margin-left: 10px;
   border-radius: 30px;
   font-size: 10px;
   justify-content: center;
   font-weight: bold;
   border: none;
-  background-color: #000000;
+  background-color: blue;
   color: #FFFFFF;
 }
 

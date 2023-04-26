@@ -20,53 +20,55 @@ function Home() {
       }
     };
   return (
-    <div className="Container">
-      <div className="Sidebar">
-        <div className="SidebarContent">
-          <img src={Logo} className="LogoImage" alt="logo" />
-          <div className="Icons">
-            <div className="Content">
-              <Link to="/channels">
-                <img src={Channels} className="" alt="channels" />
-                <p></p>
-              </Link>
+    <div>
+        <div className="Container">
+            <div className="Sidebar">
+                <div className="SidebarContent">
+                <img src={Logo} className="LogoImage" alt="logo" />
+                <div className="Icons">
+                    <div className="Content">
+                    <Link to="/channels">
+                        <img src={Channels} className="" alt="channels" />
+                        <p></p>
+                    </Link>
+                    </div>
+                    <div className="Content">
+                    <Link to="/invite">
+                        <img src={Invite} className="" alt="invite" />
+                        <p></p>
+                    </Link>
+                    </div>
+                    <div className="Content">
+                    <Link to="/logout">
+                        <img src={logout} className="" alt="invite" />
+                        <p></p>
+                    </Link>
+                    </div>
+                </div>
+                </div>
             </div>
-            <div className="Content">
-              <Link to="/invite">
-                <img src={Invite} className="" alt="invite" />
-                <p></p>
-              </Link>
+            <div className="MainContainer">
+                <div className="Tint"></div>
+                <div className="Quote">
+                <p>
+                    'People want their 15 minutes and are <br></br> willing to do anything to get it' <br></br>~ Joe Rogan
+                </p>
+                <div className="Button">
+                    {/* {isLoggedIn && (
+                    <button onClick={handleNewPodcastClick}>Start a New Podcast</button>
+                    )} */}
+                    {!isLoggedIn && (
+                    <Link to="/login">
+                        <button>Start a New Podcast</button>
+                    </Link>
+                    )}
+                </div>
+                </div>
             </div>
-            <div className="Content">
-              <Link to="/logout">
-                <img src={logout} className="" alt="invite" />
-                <p></p>
-              </Link>
-            </div>
-          </div>
         </div>
-      </div>
-      <div className="MainContainer">
-        <div className="Tint"></div>
-        <div className="Quote">
-          <p>
-            'People want their 15 minutes and are <br></br> willing to do anything to get it' <br></br>~ Joe Rogan
-          </p>
-          <div className="Button">
-            {/* {isLoggedIn && (
-              <button onClick={handleNewPodcastClick}>Start a New Podcast</button>
-            )} */}
-            {!isLoggedIn && (
-              <Link to="/login">
-                <button>Start a New Podcast</button>
-              </Link>
-            )}
-          </div>
+        <div className="ChannelContainer">
+            <Channel/>
         </div>
-      </div>
-      <div>
-      {/* <Channel/> */}
-      </div>
     </div>
   );
 }
