@@ -49,9 +49,9 @@ function Home() {
                     </div>
                     <div className="Content">
                     <Link to="/logout">
-  <img src={logout} className="" alt="logout" onClick={handleLogoutClick} />
-  <p>Logout</p>
-</Link>
+                        <img src={logout} className="" alt="logout" onClick={handleLogoutClick} />
+                        <p></p>
+                    </Link>
 
                     </div>
                 </div>

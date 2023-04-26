@@ -26,7 +26,7 @@ function Signup() {
       };
   
       try {
-        const response = await fetch("http://localhost:3000/registrations", {
+        const response = await fetch("https://chat-room-ig50.onrender.com/registrations", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
