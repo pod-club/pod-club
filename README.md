@@ -1,4 +1,3 @@
-```
 # Podclub
 
 Podclub is a web application that allows users to join chatrooms and discuss podcasts in real-time.
@@ -34,39 +33,32 @@ This application was built with the following technologies:
 
 1. Clone the repository:
 
-```
+
 git clone https://github.com/YOUR-USERNAME/podclub.git
-```
+
 
 2. Install the dependencies:
 
-```
 cd backend
 bundle install
 cd frontend
 npm install
-```
+
 
 3. Set up the database:
 
-```
 rails db:create
 rails db:migrate
 rails db:seed
-```
 
 4. Start the development server:
 
-```
 rails s
-```
 
 5. In a separate terminal window, start the React development server:
 
-```
 cd frontend
 npm start
-```
 
 ## Usage
 
@@ -87,4 +79,3 @@ npm start
 ## License
 
 MIT
-```
