@@ -108,7 +108,6 @@ To authenticate a user and create a session, you can make a POST request to `/se
 This API was built with Ruby on Rails, version 6.1. It uses the following gems:
 
 - `bcrypt` for password encryption
-- `jwt` for JSON Web Token authentication
 - `rack-cors` for handling Cross-Origin Resource Sharing (CORS)
 
 ## Contributing
