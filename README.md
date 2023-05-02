@@ -35,7 +35,7 @@ This application was built with the following technologies:
 1. Clone the repository:
 
 ```
-git clone https://github.com/<YOUR-USERNAME>/podclub.git
+git clone https://github.com/YOUR-USERNAME/podclub.git
 ```
 
 2. Install the dependencies:
