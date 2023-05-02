@@ -12,7 +12,7 @@ Visual Studio Code.
 Live server extension.
 ### Link to webpage
 
-        (https://pod-club-frontend.onrender.com)
+        (https://podclub.netlify.app/login)
 
 ### Link to db (backend)
 
