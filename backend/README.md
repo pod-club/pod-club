@@ -1,7 +1,7 @@
 
 # Podclub API
 
-This is a Rails API for a chatroom application, including routes for sessions, registrations, chatroom and  message controller
+This is a Rails API for a chatroom application, including routes for sessions, registrations, chatroom and  message controller. You can find the deployed link on render here: https://podclub-backend.onrender.com/
 
 ## Getting Started
 
