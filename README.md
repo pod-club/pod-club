@@ -68,6 +68,12 @@ npm start
 4. Use the report button to report any inappropriate content.
 5. Admins can ban/unban users and view a list of banned users.
 
+## Snippets
+![Screenshot from 2023-05-02 12-51-04](https://user-images.githubusercontent.com/117739733/235636155-e9eb7e8d-5744-4c63-b792-e624e8424d3e.png)
+![Screenshot from 2023-05-02 12-52-01](https://user-images.githubusercontent.com/117739733/235636296-5a183dba-bd5a-4a79-91ef-bd2207011ead.png)
+![Screenshot from 2023-05-02 12-55-00](https://user-images.githubusercontent.com/117739733/235636373-ee44fa1d-97b9-4c6c-94df-677dbc69cc63.png)
+
+
 ## Authors
 - Enock Kipkoech
 - Zamil Sheikh
