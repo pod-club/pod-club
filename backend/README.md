@@ -95,11 +95,11 @@ If you don't have them installed, you can follow the instructions on the [Ruby](
 
 - `DELETE /logout`: Log out a user.
 - `GET /logged_in`: Check if a user is logged in.
-- `GET /`: Show the home page.
+- `GET /`: Show the home page. 
 
 ## Usage
 
-To use this API, you can make HTTP requests to the various routes described above. For example, to create a new user, you could make a POST request to `/registrations` with the user's email and password in the request body. 
+To use this API, you can make HTTP requests to the various routes described above. For example, to create a new user, you could make a POST request to `/registrations` with the user's email and password in the request body.  
 
 To authenticate a user and create a session, you can make a POST request to `/sessions` with the user's email and password in the request body. This will return an authentication token that you can use for subsequent requests that require authentication.
 
